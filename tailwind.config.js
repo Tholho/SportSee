@@ -4,7 +4,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./index.html",],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'sportsee-red': '#E60000',
+      }
+    },
   },
   plugins: [],
 }
