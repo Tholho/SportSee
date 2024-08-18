@@ -5,10 +5,11 @@ interface IconProps {
     size?: number;
     src: string;
     bgColor?: string;
+    color?: string;
     className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", className }) => {
+const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", color = "text-sportsee-red", className }) => {
     return (
         <div className={`p-4 ${bgColor} rounded`}>
             <ReactSVG src={src}
@@ -16,7 +17,8 @@ const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", class
                 beforeInjection={(svg) => {
                     svg.setAttribute('width', size.toString());
                     svg.setAttribute('height', size.toString());
-                    svg.setAttribute('fill', size.toString());
+                    svg.setAttribute('fill', color.toString());
+                    svg.setAttribute('stroke', color.toString());
                 }}
             />
         </div>
