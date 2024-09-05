@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         'sportsee-red': '#E60000',
+        'sportsee-brightred': '#FF0000'
       }
     },
   },

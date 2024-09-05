@@ -1,11 +1,11 @@
 import React from "react"
 import Icon from "./Icon"
 
-interface SideIconsProps {
+interface FoodIconsProps {
     contents: { [key: string]: string };
 }
 
-const SideIcons: React.FC<SideIconsProps> = ({ contents }) => (
+const SideIcons: React.FC<FoodIconsProps> = ({ contents }) => (
     <ul className="p-6 space-y-4">
         {Object.entries(contents).map(([key, value]) => (
             <li key={key} >

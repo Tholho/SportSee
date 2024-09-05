@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import Aside from './Aside';
+import Header from './header';
+import Aside from './aside';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -8,15 +8,13 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <>
+        <div className="layout flex flex-col min-h-screen">
+            <Header />
             <Aside />
-            <div className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-grow p-4">
-                    {children}
-                </main>
-            </div>
-        </>
+            <main className="p-4 ml-48 mt-10 flex-grow flex-col h-full">
+                {children}
+            </main>
+        </div>
     );
 };
 

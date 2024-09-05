@@ -9,11 +9,10 @@ interface IconProps {
     className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", color = "text-sportsee-red", className }) => {
+const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", color = "text-sportsee-red" }) => {
     return (
         <div className={`p-4 ${bgColor} rounded`}>
             <ReactSVG src={src}
-                className={className}
                 beforeInjection={(svg) => {
                     svg.setAttribute('width', size.toString());
                     svg.setAttribute('height', size.toString());
