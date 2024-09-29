@@ -1,17 +1,10 @@
 import React from "react"
 import { ReactSVG } from "react-svg";
+import { IconProps } from "../types/icons";
 
-interface IconProps {
-    size?: number;
-    src: string;
-    bgColor?: string;
-    color?: string;
-    className?: string;
-}
-
-const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", color = "text-sportsee-red" }) => {
+const Icon: React.FC<IconProps> = ({ src, size = 32, bgColor = "bg-white", bgOpacity = "bg-opacity-100", svgPadding = "p-4", color = "text-sportsee-red" }) => {
     return (
-        <div className={`p-4 ${bgColor} rounded`}>
+        <div className={`${bgColor} ${bgOpacity} ${svgPadding} rounded`}>
             <ReactSVG src={src}
                 beforeInjection={(svg) => {
                     svg.setAttribute('width', size.toString());

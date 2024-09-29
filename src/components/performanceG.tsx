@@ -1,5 +1,5 @@
 import { PerformanceData } from "../types/data"
-import { RadarChart, PolarGrid, PolarAngleAxis, Radar, Legend, PolarRadiusAxis } from "recharts";
+import { RadarChart, PolarGrid, PolarAngleAxis, Radar, Legend, PolarRadiusAxis, ResponsiveContainer } from "recharts";
 
 const PerformanceG: React.FC<{ data: PerformanceData['data'] }> = ({ data }) => {
 
@@ -15,13 +15,17 @@ const PerformanceG: React.FC<{ data: PerformanceData['data'] }> = ({ data }) => 
     ]
     console.log(data.data[0])
     return (
-            <RadarChart outerRadius={90} width={250} height={250} data={graphData}>
+        <div className="flex-1 p-2 bg-[#282D30] rounded text-white">
+        <ResponsiveContainer width="100%" height="100%">
+            <RadarChart width={300} height={300} data={graphData} margin={{ top: 15, right: 25, bottom: 15, left: 25 }
+        }>
                 <PolarGrid gridType="polygon" radialLines={false} />
-                <PolarAngleAxis axisLine={false} dataKey="stat" tick={{ fill: "#FFFFFF", fontSize: "12" }} />
-                <PolarRadiusAxis axisLine={false} domain={[0, 200]} tick={false} tickCount={5} ticks={[50, 100, 200, 300, 400] as any} />
+                <PolarAngleAxis axisLine={false} dataKey="stat" tick={{ fill: "#FFFFFF", fontSize: "12" }}/>
+                <PolarRadiusAxis axisLine={false} domain={[0, 400]} tick={false} tickCount={5} ticks={[50, 100, 200, 300, 400] as any} />
                 <Radar legendType="none" dataKey="value" stroke="#FF0101" fill="#FF0101" fillOpacity={0.6} />
-                <Legend />
             </RadarChart>
+            </ResponsiveContainer>
+            </div>
     )
 }
 
