@@ -32,7 +32,6 @@ const AverageSessions: React.FC<{ data: AverageSessionsData['data'] }> = ({ data
 
     const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
 
-    console.log(data.userId)
     return (
         <div className="flex-1 p-2 bg-[#FF0000] relative rounded h-full">
             <p className="absolute text-white w-[60%] left-8 top-4">Durée moyenne des sessions</p>
