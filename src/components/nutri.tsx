@@ -3,7 +3,6 @@ import { BaseData } from "../types/data"
 import FoodPart from "./foodPart";
 
 const Nutri: React.FC<{ data: BaseData['data'] }> = ({ data }) => {
-    console.log(data.id)
     return (
         <div className="flex flex-col w-[20%] justify-between">
             <FoodPart 

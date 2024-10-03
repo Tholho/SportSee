@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { AverageSessionsData } from "../types/data"
-import { LineChart, XAxis, Tooltip, ReferenceArea, Line, ResponsiveContainer } from "recharts"
+import { LineChart, XAxis, Tooltip, Line, ResponsiveContainer } from "recharts"
 
 import { TooltipProps } from 'recharts';
 // for recharts v2.1 and above

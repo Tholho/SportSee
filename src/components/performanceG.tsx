@@ -1,9 +1,7 @@
 import { PerformanceData } from "../types/data"
-import { RadarChart, PolarGrid, PolarAngleAxis, Radar, Legend, PolarRadiusAxis, ResponsiveContainer } from "recharts";
+import { RadarChart, PolarGrid, PolarAngleAxis, Radar, PolarRadiusAxis, ResponsiveContainer } from "recharts";
 
 const PerformanceG: React.FC<{ data: PerformanceData['data'] }> = ({ data }) => {
-
-
     const graphData = [
 
         { stat: data.kind[6], value: data.data.find(item => item.kind === 6)?.value },
@@ -13,7 +11,6 @@ const PerformanceG: React.FC<{ data: PerformanceData['data'] }> = ({ data }) => 
         { stat: data.kind[2], value: data.data.find(item => item.kind === 2)?.value },
         { stat: data.kind[1], value: data.data.find(item => item.kind === 1)?.value }
     ]
-    console.log(data.data[0])
     return (
         <div className="flex-1 p-2 bg-[#282D30] rounded text-white">
         <ResponsiveContainer width="100%" height="100%">

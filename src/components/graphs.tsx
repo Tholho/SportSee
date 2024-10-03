@@ -6,7 +6,6 @@ import PerformanceG from "./performanceG"
 import ScoreG from "./scoreG"
 
 const Graphs: React.FC<{ data: UserData }> = ({ data }) => {
-    //console.log(data.activity)
     return (
         <div className="flex-col w-full">
             <ActivityG data={data.activity.data} />
