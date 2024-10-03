@@ -63,8 +63,8 @@ const ActivityG: React.FC<{ data: ActivityData['data'] }> = ({ data }) => {
                     width={700}
                     height={250}
                     data={data.sessions}
-                    barGap={10}
-                    barCategoryGap={30}
+                    barGap="15%"
+                    barCategoryGap="35%"
                     margin={{
                         top: 20,
                         right: 20,
