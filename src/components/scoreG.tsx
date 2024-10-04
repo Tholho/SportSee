@@ -18,7 +18,7 @@ const ScoreG: React.FC<{ data: BaseData['data'] }> = ({ data }) => {
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart width={220} height={220}>
                     <Pie data={graphData} dataKey="value" cx="50%" cy="50%" innerRadius="63%" outerRadius="73%" startAngle={-150} endAngle={-390} fill="#FFFFFF" cornerRadius={10}>
-                        {graphData.map((entry, index) => (
+                        {graphData.map((value, index) => (
                             <Cell
                                 key={`cell-${index}`}
                                 fill={index === 0 ? '#FB0000' : '#F5F5F5'}
@@ -26,12 +26,12 @@ const ScoreG: React.FC<{ data: BaseData['data'] }> = ({ data }) => {
                             />
                         ))}
                     </Pie>
-                    <svg className="z-10 absolute inset-0 w-full h-full" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" preserveAspectRatio="xMidYMid meet" fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle fill="#FFFFFF" cx="50%" cy="50%" r="30%"></circle></g></svg>
+                    <svg className="z-10 absolute inset-0 w-full h-full" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" role="img" preserveAspectRatio="xMidYMid meet" fill=""><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><circle fill="#FFFFFF" cx="50%" cy="50%" r="30%"></circle></g></svg>
                 </PieChart>
             </ResponsiveContainer>
             <div className="z-20 absolute inset-0 flex flex-col justify-center items-center">
                 <p className="font-semibold text-[140%]">{score * 100}%</p>
-                <p className="text-[#74798C] text-[90%]">de votre objectif</p>
+                <p className="text-sportsee-midgrey text-[90%]">de votre objectif</p>
             </div>
         </div>
     )

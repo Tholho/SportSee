@@ -34,7 +34,7 @@ const AverageSessions: React.FC<{ data: AverageSessionsData['data'] }> = ({ data
 
     return (
         <div className="flex-1 p-2 bg-[#FF0000] relative rounded h-full">
-            <p className="absolute text-white w-[60%] left-8 top-4">Durée moyenne des sessions</p>
+            <p className="absolute text-white w-[60%] left-6 top-4">Durée moyenne des sessions</p>
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart width={260} height={260} data={data.sessions}
                     margin={{ top: 35, right: 0, left: 5, bottom: 5 }}>

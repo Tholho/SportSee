@@ -13,7 +13,7 @@ const FoodPart: React.FC<FoodPartProps> = ({keyDataType, data, ...iconProps }) =
         <Icon {...iconProps} />
         <div className="flex flex-col">
         <p className="font-semibold text-l">{data}</p>
-        <p className="text-[#74798C] text-sm">{keyDataType}</p>
+        <p className="text-sportsee-midgrey text-sm">{keyDataType}</p>
         </div>
         </div>
     )

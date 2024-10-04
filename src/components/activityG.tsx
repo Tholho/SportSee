@@ -14,17 +14,15 @@ const RoundedBar = (props) => {
 
     return (
         <g>
-            {/* Création d'une barre avec sommet arrondi */}
             <rect
                 x={x}
                 y={y}
                 width={width}
                 height={height}
-                rx={radius}  // Rayon pour les bords arrondis en haut
+                rx={radius}
                 ry={radius}
                 fill={fill}
             />
-            {/* Ajouter un rectangle au bas pour combler la partie non arrondie */}
             <rect
                 x={x}
                 y={y + height - radius}
@@ -42,7 +40,7 @@ const CustomTooltip = ({
 }: TooltipProps<ValueType, NameType>) => {
     if (active && payload && payload.length) {
         return (
-            <div className="custom-tooltip bg-[#E60000]">
+            <div className="custom-tooltip bg-sportsee-red">
                 <p className="text-white p-2 text-xs">{`${payload[0].value}`}kg</p>
                 <p className="text-white p-2 text-xs">{`${payload[1].value}`}kCal</p>
 
@@ -57,7 +55,7 @@ const ActivityG: React.FC<{ data: ActivityData['data'] }> = ({ data }) => {
 
     return (
         <div className="relative flex-grow bg-neutral-50 h-1/2">
-            <h2 className="absolute top-4 left-8 font-normal">Activite quotidienne</h2>
+            <h2 className="absolute top-4 left-8 font-normal">Activité quotidienne</h2>
             <ResponsiveContainer width="100%" height="95%">
                 <BarChart
                     width={700}
