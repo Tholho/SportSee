@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "/public/sportsee.svg";
+import logo from "/src/sportsee.svg";
 
 const Header: React.FC = () => {
     return (
