@@ -76,7 +76,6 @@ const homeLoaderDB = async () => {
     }
     catch (error) {
         console.error('Data loading failed:', error);
-        
         throw error;
         
     }
